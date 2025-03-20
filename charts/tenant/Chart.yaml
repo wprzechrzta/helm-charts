@@ -1,0 +1,22 @@
+apiVersion: v2
+name: tenant
+description: A Helm chart for Kubernetes tenant management
+type: application
+icon: https://avatars.githubusercontent.com/u/74616112
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - cloudquery
+sources:
+  - https://github.com/cloudquery/helm-charts/tree/main/charts/tenant
+maintainers:
+  - name: yevgenypats
+    email: yp@cloudquery.io
+annotations:
+  artifacthub.io/license: MPL-2.0
+  artifacthub.io/links: |
+    - name: cloudquery
+      url: https://github.com/cloudquery/cloudquery
+  artifacthub.io/maintainers: |
+    - name: yevgenypats
+      email: yp@cloudquery.io

@@ -1,0 +1,71 @@
+# -- Clickhouse secrets
+clickhouseSecret:
+  # -- Required: The secret reference to use for the user-supplied clickhouse secrets
+  secretRef: "clickhouse-credentials"
+
+postgresSecret:
+  # -- Required: The secret reference to use for the user-supplied postgres secrets
+  secretRef: "postgres-credentials"
+
+# AWS configuration
+aws:
+  # -- Required: AWS OIDC provider URL
+  oidcProvider: ""
+  # -- Required: AWS account ID
+  accountId: ""
+
+# Tenant configuration
+tenant:
+  # -- Required: Tenant name
+  name: "tenant01"  # example tenant name
+  # -- Required: Kubernetes namespace for the tenant
+  namespace: ""  # example tenant namespace
+  # -- Optional: Whether to create RBAC role for the tenant
+  createRole: false  # Set to false to skip role creation
+
+# PostgreSQL initialization job configuration
+postgresJob:
+  # -- Number of retries before considering a Job as failed
+  backoffLimit: 4
+  # -- Time to keep completed jobs
+  ttlSecondsAfterFinished: 100
+  # -- Container image configuration
+  image:
+    # -- PostgreSQL image repository
+    repository: bitnami/postgresql
+    # -- PostgreSQL image tag
+    tag: 17.4.0
+    # -- Image pull policy
+    pullPolicy: IfNotPresent
+  # -- Resource configuration for PostgreSQL job
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+
+# ClickHouse initialization job configuration
+clickhouseJob:
+  # -- Number of retries before considering a Job as failed
+  backoffLimit: 4
+  # -- Time to keep completed jobs
+  ttlSecondsAfterFinished: 100
+  # -- Container image configuration
+  image:
+    # -- ClickHouse image repository
+    repository: clickhouse
+    # -- ClickHouse image tag
+    tag: 25.1.5
+    # -- Image pull policy
+    pullPolicy: IfNotPresent
+  # -- Resource configuration for ClickHouse job
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
