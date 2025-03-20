@@ -11,6 +11,32 @@ entries:
           email: yp@cloudquery.io
     apiVersion: v2
     appVersion: 1.0.0
+    created: "2025-03-20T09:28:41.816627457Z"
+    description: A Helm chart for Kubernetes tenant management
+    digest: 44a183f7d2480ce184413dfa35b91b117f8c7243fb39ae57170a42b05bcdaef2
+    icon: https://avatars.githubusercontent.com/u/74616112
+    keywords:
+    - cloudquery
+    maintainers:
+    - email: yp@cloudquery.io
+      name: yevgenypats
+    name: tenant
+    sources:
+    - https://github.com/cloudquery/helm-charts/tree/main/charts/tenant
+    type: application
+    urls:
+    - https://github.com/wprzechrzta/helm-charts/releases/download/tenant-0.2.0/tenant-0.2.0.tgz
+    version: 0.2.0
+  - annotations:
+      artifacthub.io/license: MPL-2.0
+      artifacthub.io/links: |
+        - name: cloudquery
+          url: https://github.com/cloudquery/cloudquery
+      artifacthub.io/maintainers: |
+        - name: yevgenypats
+          email: yp@cloudquery.io
+    apiVersion: v2
+    appVersion: 1.0.0
     created: "2025-03-20T09:20:02.286298543Z"
     description: A Helm chart for Kubernetes tenant management
     digest: e2fcc460a18c49e63d16ad41122004b413f3e0513c181e69ea807da2b6ef93d3
@@ -27,4 +53,4 @@ entries:
     urls:
     - https://github.com/wprzechrzta/helm-charts/releases/download/tenant-0.1.0/tenant-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-20T09:20:02.286304303Z"
+generated: "2025-03-20T09:28:41.816635382Z"
